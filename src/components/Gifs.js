@@ -1,7 +1,7 @@
 
 
 function Gifs(props) {
-    return <h2>Random Gifs</h2>
+    return <h2>url {props.url}</h2>
 
   }
   

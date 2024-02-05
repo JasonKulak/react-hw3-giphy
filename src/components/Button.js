@@ -1,10 +1,10 @@
 function Button(props) {
-  const getGif = () => {
-    props.getGifFromApp();
-  };
+  // const getGif = () => {
+  //   props.getGifFromApp();
+  // };
 
   return (
-    <button type="button" onClick={getGif}>
+    <button type="button" onClick={props.getGif}>
       Get a Gif
     </button>
   );

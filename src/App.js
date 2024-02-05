@@ -12,7 +12,7 @@ function App() {
   const getGif = async () => {
     //apikey
     const apiKey = "T49vkgIn68gSf1nOa9R8RWmbm3IWruUj";
-    const url = `api.giphy.com/v1/gifs/random?api_key=${apiKey}`;
+    const url = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`;
 
 
     // console.log(url)
@@ -24,18 +24,20 @@ function App() {
 
 
     //get the JSON from the response
-    // const data = await res.json();
-    console.log(res)
+    const data = await res.json();
+    // console.log(await res.json())
     // console.log("url", data.data.image_url);
     // //update the state with a Gif
-    // setGifSrc(data);
+    setGifSrc(data);
+    //the current state of the Gif url
+    console.log(url)
   };
 
   return (
     <div className="App">
       <Header />
-      <Button getGifFromApp={getGif} />
-      <Gifs />
+      <Button getGif={getGif} />
+      <Gifs url={url}/>
     </div>
   );
 }
