@@ -1,8 +1,10 @@
 
 
 function Gifs(props) {
-    return <h2>url {props.url}</h2>
-
+    console.log(props)
+    return (
+      <h2>Here's your Gif!</h2>
+    )
   }
   
   export default Gifs;
