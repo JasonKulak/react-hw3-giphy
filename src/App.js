@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   //state
-  const [gifSrc, setGifSrc] = useState();
+  const [gifSrc, setGifSrc] = useState(null);
 
   //function to get a Gif from the api
   const getGif = async () => {
@@ -25,10 +25,14 @@ function App() {
 
     //get the JSON from the response
     const data = await res.json();
+    const gif = data.data.images.fixed_height.url
    
     //update the state with a Gif
-    setGifSrc(data);
+    setGifSrc(gif);
   };
+  useEffect(() => {
+
+  }, [])
 
   return (
     <div className="App">

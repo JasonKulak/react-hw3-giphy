@@ -1,11 +1,11 @@
 
 
-function Gifs(props) {
-    console.log(props)
+function Gifs({gifSrc}) {
+   
     return (
       <div>
         <h2>Here's your Gif!</h2>
-        <img src={props.gifSrc} />
+        <img src={gifSrc} />
       </div>
     )
   }
